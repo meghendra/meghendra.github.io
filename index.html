@@ -37,29 +37,29 @@
 	<!-- header 
    ================================================== -->
    <header>   	
-   	<div class="row">
+   	<!-- <div class="row"> -->
 
    		<div class="top-bar">
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-	   		<div class="logo">
+<!-- 	   		<div class="logo">
 		         <a class="menu-toggle" href="#">Menu</a>
-		      </div>		       
+		      </div> -->		       
 
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
 						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
 						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
 						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
-						<li><a class="smoothscroll"  href="#portfolio" title="">Research</a></li>
 						<li><a class="smoothscroll"  href="#services" title="">Projects</a></li>	
-						<li><a class="smoothscroll"  href="#awards" title="">Awards</a></li>					
+						<li><a class="smoothscroll"  href="#awards" title="">Awards</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">Research</a></li>			
 						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>			
 					</ul>
 				</nav>    		
    		</div> <!-- /top-bar --> 
    		
-   	</div> <!-- /row --> 		
+   	<!-- </div> /row 		 -->
    </header> <!-- /header -->
 
 	<!-- intro section
@@ -443,11 +443,116 @@
 
 	<div class="row button-section">
    		<div class="col-twelve">
-   			<a class="button stroke smoothscroll" href="#portfolio" title="">View My Research</a>
+   			<a class="button stroke smoothscroll" href="#services" title="">View My Projects</a>
    		</div>   		
    	</div>
 	</section> <!-- /features -->
 
+	<!-- services Section
+   ================================================== -->
+	<section id="services" class="white-section">
+<div class="row section-intro">
+   		<div class="col-twelve">
+   			<h5>Projects</h5>
+   			<h1>Some of my software projects.</h1>
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-six tab-full">
+
+		      <h3>Forest Detector</h3>
+
+		      <p class="justify" ><img width="240" height="240" class="pull-left" alt="sample-image" src="images/forest.jpg">
+		  		The objective here was to classify regions of forest within a geographic area using deep convolutional neural networks (CNNs). The project involved development of software infrastructure to train different CNN architectures on a dataset of "forest" and "non-forest" images. The trained networks were then used to automatically annotate forest and non-forest regions in a large aerial image of Floyd County, VA. Technologies used: Python, Pandas, Flask, TensorFlow, Keras. More details available in this <a href="https://github.com/meghendra/Forest-Detection-Paper-Spring-2017/blob/master/paper.pdf" target="_blank">paper</a>. Source code for this project is available <a href="https://github.com/meghendra/ForestDetection" target="_blank">here</a>.
+		  		</p> 
+         </div>
+         <div class="col-six tab-full">
+
+		      <h3>ApartMates</h3>
+
+		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/apartmates.jpg">
+		  		 ApartMates is a web service that enables delegation and sharing of responsibilities and expenses among roommates in shared apartments. Users can create tasks with deadlines and priorities, shared amongst all roommates, and earn reputation points for finishing tasks on time. The system automatically generates grocery lists and grocery prices using the Walmart Open API. It also provides a RESTful interface to access user reputation points. Technologies used: JavaEE, PrimeFaces, JPA, MySQL, JAX-RS. More details available in the <a href="https://github.com/meghendra/ApartMates/raw/master/ApartMatesProjectReport.pdf" target="_blank">report</a>. Source code for this project is available <a href="https://github.com/meghendra/ApartMates" target="_blank">here</a>.
+		  		</p> 
+         </div><hr>
+         <div class="col-six tab-full">
+
+		      <h3>Beat-Click</h3>
+
+		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/bsclick.jpg">
+		      	 This is a system consisting of Android wearable and smartphone applications which captures images using the smartphone camera when the heart rate (HR) of the user changes. The key idea is certain HR patterns are associated with a change in a person's disposition, and thus can be used as signals to capture important events a person experiences, while doing an activity (e.g., hiking) using photographs. The captured photographs along with associated HR values and timestamps can be analyzed post-hoc to discover, visualize and document changes in user's mood through a hike and the important events associated with these changes. Such information can be used to automatically capture and filter important memories for the user, without disrupting their hiking experience. Technologies used: Java, Python, Android SDK, Wear SDK, Plotly. Details about the system and the broader project are available in this <a href="https://github.com/meghendra/BeatClickWearApp/raw/master/context-aware-implicit.pdf" target="_blank">paper</a>. Source code is available <a href="https://github.com/meghendra/BeatClickWearApp" target="_blank">here</a>.
+		  		</p> 
+         </div>
+
+        <div class="col-six tab-full">
+
+		      <h3>Memory Box</h3>
+
+		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/membox2.gif">
+		      The objective here was to build a system that can find instances (frames) within videos in a large video library that match a natural language user query. The system builds on the <a href="http://cs.stanford.edu/people/karpathy/deepimagesent/" target="_blank">Automated Image Captioning Using Deep Learning</a> approach by Andrej Karpathy, Fei-Fei Li and extends it to videos. In essence, the system pre-processes all the videos in the library, by sampling frames (i.e. images) from each video, every few seconds and generates natural language captions for each frame using a Convolutional neural network and a Long short-term memory network. These captions are then indexed as documents along with the corresponding video url and timestamp. When a users submits a search query, this index is used to retrieve the caption that best matches the search terms, along with the video and the precise timestamp, within the video associated with the caption. This project was built during the <a href="https://buildtolearn.devpost.com/" target="_blank">Build to Learn</a> hackathon at Virginia Tech. Technologies used: Python, Flask, PyTorch, Lucene, CNN, LSTM, Bootstrap. Video demo and more details are available on <a href="https://devpost.com/software/memorybox-o18c50" target="_blank">Devpost</a>. The source code can be found <a href="https://github.com/meghendra/videoEventSearch" target="_blank">here</a>.
+		  		</p> 
+         </div><hr>
+
+         <div class="col-six tab-full">
+
+		      <h3>The Social Network</h3>
+
+		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/tsn.jpg">
+		  		This is one of my undergraduate projects, a social networking web service. The system application is capable of securely loging users in and out. Users can create public profiles, upload profile picture and chat with other users. It also has the “remember me” feature which allows users to access their profiles without logging in. Technologies used: PHP, MySQL, HTML, CSS, JavaScript, Apache, Google Maps API. More details available in this <a href="https://github.com/meghendra/TheSocialNetwork/raw/master/TechReportTSN.pdf" target="_blank">report</a>. Source code for this project is available <a href="https://github.com/meghendra/TheSocialNetwork" target="_blank">here</a>.
+		  		</p> 
+         </div>
+
+         <div class="col-six tab-full">
+
+		      <h3>A* Maze Solver</h3>
+
+		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/astar.jpg">
+		  		This is a <a href="http://ccl.northwestern.edu/netlogo/index.shtml" target="_blank">NetLogo</a> toy simulation which simulates the A* path finding algorithm. Users can draw obstacles or completes mazes and the agent (turtle) will find the shortest possible path (if one exists) to a destination point (patch). The path finding is visualized in the model, so users can observe, understand and learn how the algorithm works. More details, including how to use the model are available on the official NetLogo user community <a href="http://ccl.northwestern.edu/netlogo/models/community/Astardemo1" target="_blank">page</a>.
+		  		</p> 
+         </div><hr>
+   	</div> <!-- /portfolio-content --> 
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a class="button stroke smoothscroll" href="#awards" title="">My Achievements</a>
+   		</div>   		
+   	</div>
+	
+	</section> 
+
+	<!-- accomplishments section
+   ================================================== -->
+   <section id="awards" class="grey-section">  
+
+   	<div class="row section-intro">
+   		<div class="col-thirteen">
+
+   			<h5>Awards</h5>
+   			<h1>Few of my accomplishments.</h1>
+
+   			<div class="col-six tab-full">
+		      <ul class="disc">
+				   <li>TCS ‘<a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtZWdodHJkZGN8Z3g6NjRkNTAwNTEyNTg5NDUyNg" target="_blank">Service & Commitment</a>’ award.</li>
+				   <li>TCS ‘<a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtZWdodHJkZGN8Z3g6ZjIxODcxNDcyNWMxZTFj" target="_blank">Star of the learners group</a>’ award.</li>
+				   <li>All India Rank of <a href="https://163bcf8c-a-62cb3a1a-s-sites.googlegroups.com/site/meghtrddc/achievements/009.jpg?attachauth=ANoY7crNK6pJkumQD7G3K4ZmxvdvEG1nikcOme5zbCojKkEjXgHTJRLoclsCszbXyQof6AB1UIODyiu_ikStrHEQYwGMXjTK_n4B3kv-Z59X_c9yxFoDWajp2guXDCCGg3H5qERq6oCnH9y6EXzVyYk2MgqxGHrZjJl1ih8LI4m8GOTEwSmjEs8HgEl8ZR3zF_OnqCypki0A1opYBavMppSNwR8nog1bQg%3D%3D&attredirects=0" target="_blank">'946' in CS GATE 2011</a> amongst 136,027 candidates.</li>
+				   <li><a href="https://163bcf8c-a-62cb3a1a-s-sites.googlegroups.com/site/meghtrddc/achievements/008.jpg?attachauth=ANoY7cr0gp-3YzL71JvgvnN9Fi_X3yXDqdc1qxZyrJEq8WbTqZTqCWsgHTQAUtow5Ob_yCY4GDlzIRro3jKvKsTTGeA6MQAfS-sF35LglsCSER41DWr-t4fz5lKT3_kiNz4_yRactSpago-9ti8SQW-ddudf6p9y-5Pejqo1j0t6D-E13QOM9udJb42AWy3xYvFUU5PyG5Ns3wYLezFyjdIcq0Ao9owVFw%3D%3D&attredirects=0" target="_blank">'First Rank'</a> in paper presentation contest @ UIT Bhopal’s Annual technical festival GECSPARK 1.0.</li>
+			   </ul>	
+		   </div>
+   			<div class="col-six tab-full">
+		      <ul class="disc">
+					<li>Organized Technocrats Institute of Technology’s Annual technical festival Technofusion’10.</li>
+					<li><a href="https://163bcf8c-a-62cb3a1a-s-sites.googlegroups.com/site/meghtrddc/achievements/007.jpg?attachauth=ANoY7crljBsrMvK1_PCfrx0YQuljHUFzLDn4tRgEpAGSrvT-RRizWyxQOfAdz33ZW_p7YZvPpRoWS8LskdcW9hH407lDVgn7J4H3pI_tlljgIlCJ6lbHn-2Ci_bS3La9_31YbPEqVCa2Vft_iToq8vUeLa5W5RNkQ0T-oNVa18jtya4yo1bVsSbWBc7yHiVzHmGH_TBmYoTdxNwaS8cfIVyczsrW0bAzug%3D%3D&attredirects=0" target="_blank">'Second Rank'</a> in Robo Race held at OIST’s National Conference (Auto Innovation).</li>
+					<li>Ran the <a href="https://drive.google.com/file/d/1gWB2BlBv3NidniTKFgCtYHQW6WtJthYx/view?usp=sharing" target="_blank">'Asheville' and 'Hokie Half-Marathons'</a> in 2017.</li>
+			   </ul>	
+		   </div>
+		</div>
+	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a class="button stroke smoothscroll" href="#contact" title="">Contact Me</a>
+   			<a class="button button-primary" href="#portfolio" title="">See My Research</a>
+   		</div>   		
+   	</div>
+   </section> <!-- /process--> 
 
 	<!-- Portfolio Section
    ================================================== -->
@@ -509,118 +614,12 @@
 		</div><hr>
 
 		</div> <!-- /services-content -->
-	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a class="button stroke smoothscroll" href="#services" title="">View My Projects</a>
-   		</div>   		
-   	</div>
-	</section> <!-- /portfolio --> 
-	
-	<!-- services Section
-   ================================================== -->
-	<section id="services" class="grey-section">
-<div class="row section-intro">
-   		<div class="col-twelve">
-   			<h5>Projects</h5>
-   			<h1>Some of my software projects.</h1>
-   		</div>   		
-   	</div> <!-- /section-intro--> 
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-six tab-full">
-
-		      <h3>Forest Detector</h3>
-
-		      <p class="justify" ><img width="240" height="240" class="pull-left" alt="sample-image" src="images/forest.jpg">
-		  		The objective here was to classify regions of forest within a geographic area using deep convolutional neural networks (CNNs). The project involved development of software infrastructure to train different CNN architectures on a dataset of "forest" and "non-forest" images. The trained networks were then used to automatically annotate forest and non-forest regions in a large aerial image of Floyd County, VA. Technologies used: Python, Pandas, Flask, TensorFlow, Keras. More details available in this <a href="https://github.com/meghendra/Forest-Detection-Paper-Spring-2017/blob/master/paper.pdf" target="_blank">paper</a>. Source code for this project is available <a href="https://github.com/meghendra/ForestDetection" target="_blank">here</a>.
-		  		</p> 
-         </div>
-         <div class="col-six tab-full">
-
-		      <h3>ApartMates</h3>
-
-		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/apartmates.jpg">
-		  		 ApartMates is a web service that enables delegation and sharing of responsibilities and expenses among roommates in shared apartments. Users can create tasks with deadlines and priorities, shared amongst all roommates, and earn reputation points for finishing tasks on time. The system automatically generates grocery lists and grocery prices using the Walmart Open API. It also provides a RESTful interface to access user reputation points. Technologies used: JavaEE, PrimeFaces, JPA, MySQL, JAX-RS. More details available in the <a href="https://github.com/meghendra/ApartMates/raw/master/ApartMatesProjectReport.pdf" target="_blank">report</a>. Source code for this project is available <a href="https://github.com/meghendra/ApartMates" target="_blank">here</a>.
-		  		</p> 
-         </div><hr>
-         <div class="col-six tab-full">
-
-		      <h3>Beat-Click</h3>
-
-		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/bsclick.jpg">
-		      	 This is a system consisting of Android wearable and smartphone applications which captures images using the smartphone camera when the heart rate (HR) of the user changes. The key idea is certain HR patterns are associated with a change in a person's disposition, and thus can be used as signals to capture important events a person experiences, while doing an activity (e.g., hiking) using photographs. The captured photographs along with associated HR values and timestamps can be analyzed post-hoc to discover, visualize and document changes in user's mood through a hike and the important events associated with these changes. Such information can be used to automatically capture and filter important memories for the user, without disrupting their hiking experience. Technologies used: Java, Python, Android SDK, Wear SDK, Plotly. Details about the system and the broader project are available in this <a href="https://github.com/meghendra/BeatClickWearApp/raw/master/context-aware-implicit.pdf" target="_blank">paper</a>. Source code is available <a href="https://github.com/meghendra/BeatClickWearApp" target="_blank">here</a>.
-		  		</p> 
-         </div>
-
-        <div class="col-six tab-full">
-
-		      <h3>Memory Box</h3>
-
-		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/membox2.gif">
-		      The objective here was to build a system that can find instances (frames) within videos in a large video library that match a natural language user query. The system builds on the <a href="http://cs.stanford.edu/people/karpathy/deepimagesent/" target="_blank">Automated Image Captioning Using Deep Learning</a> approach by Andrej Karpathy, Fei-Fei Li and extends it to videos. In essence, the system pre-processes all the videos in the library, by sampling frames (i.e. images) from each video, every few seconds and generates natural language captions for each frame using a Convolutional neural network and a Long short-term memory network. These captions are then indexed as documents along with the corresponding video url and timestamp. When a users submits a search query, this index is used to retrieve the caption that best matches the search terms, along with the video and the precise timestamp, within the video associated with the caption. This project was built during the <a href="https://buildtolearn.devpost.com/" target="_blank">Build to Learn</a> hackathon at Virginia Tech. Technologies used: Python, Flask, PyTorch, Lucene, CNN, LSTM, Bootstrap. Video demo and more details are available on <a href="https://devpost.com/software/memorybox-o18c50" target="_blank">Devpost</a>. The source code can be found <a href="https://github.com/meghendra/videoEventSearch" target="_blank">here</a>.
-		  		</p> 
-         </div><hr>
-
-         <div class="col-six tab-full">
-
-		      <h3>The Social Network</h3>
-
-		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/tsn.jpg">
-		  		This is one of my undergraduate projects, a social networking web service. The system application is capable of securely loging users in and out. Users can create public profiles, upload profile picture and chat with other users. It also has the “remember me” feature which allows users to access their profiles without logging in. Technologies used: PHP, MySQL, HTML, CSS, JavaScript, Apache, Google Maps API. More details available in this <a href="https://github.com/meghendra/TheSocialNetwork/raw/master/TechReportTSN.pdf" target="_blank">report</a>. Source code for this project is available <a href="https://github.com/meghendra/TheSocialNetwork" target="_blank">here</a>.
-		  		</p> 
-         </div>
-
-         <div class="col-six tab-full">
-
-		      <h3>A* Maze Solver</h3>
-
-		      <p class="justify"><img width="240" height="240" class="pull-left" alt="sample-image" src="images/astar.jpg">
-		  		This is a <a href="http://ccl.northwestern.edu/netlogo/index.shtml" target="_blank">NetLogo</a> toy model which simulates the A* path finding algorithm. Users can draw obstacles or completes mazes and the agent (turtle) will find the shortest possible path (if one exists) to a destination point (patch). The path finding is visualized in the model, so users can observe, understand and learn how the algorithm works. More details, including how to use the model are available on the official NetLogo user community <a href="http://ccl.northwestern.edu/netlogo/models/community/Astardemo1" target="_blank">page</a>.
-		  		</p> 
-         </div><hr>
-   	</div> <!-- /portfolio-content --> 
-   	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a class="button stroke smoothscroll" href="#awards" title="">My Achievements</a>
-   		</div>   		
-   	</div>
-	
-	</section> <!-- /research -->	
-	
-<!-- accomplishments section
-   ================================================== -->
-   <section id="awards">  
-
-   	<div class="row section-intro">
-   		<div class="col-thirteen">
-
-   			<h5>Awards</h5>
-   			<h1>Few of my accomplishments.</h1>
-
-   			<div class="col-six tab-full">
-		      <ul class="disc">
-				   <li>TCS ‘<a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtZWdodHJkZGN8Z3g6NjRkNTAwNTEyNTg5NDUyNg" target="_blank">Service & Commitment</a>’ award.</li>
-				   <li>TCS ‘<a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtZWdodHJkZGN8Z3g6ZjIxODcxNDcyNWMxZTFj" target="_blank">Star of the learners group</a>’ award.</li>
-				   <li>All India Rank of <a href="https://163bcf8c-a-62cb3a1a-s-sites.googlegroups.com/site/meghtrddc/achievements/009.jpg?attachauth=ANoY7crNK6pJkumQD7G3K4ZmxvdvEG1nikcOme5zbCojKkEjXgHTJRLoclsCszbXyQof6AB1UIODyiu_ikStrHEQYwGMXjTK_n4B3kv-Z59X_c9yxFoDWajp2guXDCCGg3H5qERq6oCnH9y6EXzVyYk2MgqxGHrZjJl1ih8LI4m8GOTEwSmjEs8HgEl8ZR3zF_OnqCypki0A1opYBavMppSNwR8nog1bQg%3D%3D&attredirects=0" target="_blank">'946' in CS GATE 2011</a> amongst 136,027 candidates.</li>
-				   <li><a href="https://163bcf8c-a-62cb3a1a-s-sites.googlegroups.com/site/meghtrddc/achievements/008.jpg?attachauth=ANoY7cr0gp-3YzL71JvgvnN9Fi_X3yXDqdc1qxZyrJEq8WbTqZTqCWsgHTQAUtow5Ob_yCY4GDlzIRro3jKvKsTTGeA6MQAfS-sF35LglsCSER41DWr-t4fz5lKT3_kiNz4_yRactSpago-9ti8SQW-ddudf6p9y-5Pejqo1j0t6D-E13QOM9udJb42AWy3xYvFUU5PyG5Ns3wYLezFyjdIcq0Ao9owVFw%3D%3D&attredirects=0" target="_blank">'First Rank'</a> in paper presentation contest @ UIT Bhopal’s Annual technical festival GECSPARK 1.0.</li>
-			   </ul>	
-		   </div>
-   			<div class="col-six tab-full">
-		      <ul class="disc">
-					<li>Organized Technocrats Institute of Technology’s Annual technical festival Technofusion’10.</li>
-					<li><a href="https://163bcf8c-a-62cb3a1a-s-sites.googlegroups.com/site/meghtrddc/achievements/007.jpg?attachauth=ANoY7crljBsrMvK1_PCfrx0YQuljHUFzLDn4tRgEpAGSrvT-RRizWyxQOfAdz33ZW_p7YZvPpRoWS8LskdcW9hH407lDVgn7J4H3pI_tlljgIlCJ6lbHn-2Ci_bS3La9_31YbPEqVCa2Vft_iToq8vUeLa5W5RNkQ0T-oNVa18jtya4yo1bVsSbWBc7yHiVzHmGH_TBmYoTdxNwaS8cfIVyczsrW0bAzug%3D%3D&attredirects=0" target="_blank">'Second Rank'</a> in Robo Race held at OIST’s National Conference (Auto Innovation).</li>
-					<li>Ran the <a href="https://drive.google.com/file/d/1gWB2BlBv3NidniTKFgCtYHQW6WtJthYx/view?usp=sharing" target="_blank">'Asheville' and 'Hokie Half-Marathons'</a> in 2017.</li>
-			   </ul>	
-		   </div>
-		</div>
-	
-   	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a class="button stroke smoothscroll" href="#contact" title="">Contact Me</a>
-   		</div>   		
-   	</div>
-   </section> <!-- /process--> 
+		<div class="row button-section">
+	   		<div class="col-twelve">
+	   			<a class="button stroke smoothscroll" href="#contact" title="">Contact Me</a>
+	   		</div>   		
+	   	</div>
+	</section> <!-- /portfolio --> 	
 
    <!-- contact
    ================================================== -->
@@ -632,7 +631,7 @@
    			<h5>Contact</h5>
    			<h1>I'd Love To Hear From You.</h1>
 
-   			<p class="lead">Please feel free to contact me any time via any of the following means, for job opportunities you may have, questions regarding my research or any of my projects! </p>
+   			<p class="lead">Please feel free to contact me any time via any of the following means, for job opportunities, questions regarding my projects or my research! </p>
 
    		</div> 
    	</div> <!-- /section-intro -->
@@ -707,7 +706,7 @@
 
       	<div class="col-six tab-full">
 	      	<div class="copyright">
-		        	<span>Credits: <a class="no-hl" href="https://www.styleshout.com/" target="_blank">styleshout</a></span>	
+		        	<span>Credits: <a class="no-hl" target="_blank">styleshout</a></span>	
 					<span>© Copyright Meghendra Singh 2017.</span> 
 		         </div>		                  
 	      	</div>
